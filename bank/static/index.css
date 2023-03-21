@@ -1,0 +1,33 @@
+.container-fluid{
+    height: 500px;
+
+    background-position: center;
+    background-size: cover;
+
+}
+.card img{
+    height: 300px;
+
+}
+.img1{
+    height: 400px;
+    width: 400px;
+    margin-top: 30px;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+
+.heading h1{
+    color:#FF8040;
+}
+.footer{
+
+}

@@ -1,0 +1,50 @@
+{% extends 'bank/basic.html' %}
+{% block css %}
+{% load static %}
+    <link rel="stylesheet" href="{%static 'home.css' %}">
+{% endblock %}
+
+{% block body %}
+{% load static %}
+    <div class="container-fluid">
+        <div class="row">
+            <div  class="col-md-8 d-flex flex-column justify-content-md-start  heading">
+                <h4 style="font-weight:bold; color:green;">Welcome to </h4>
+                <h1 style="color:#FF8040; font-size:50px; font-weight:bold;">National Bank</h1>
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="container ">
+        <div class="row d-flex justify-content-md-around  section2 align-item-center mt-5">
+            <div class="col-md-3 col-md-2  mt-5 ">
+                <div class="card m-sm-auto" style="width: 18rem;">
+                    <img src="{%static 'user.jpg'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <a href="/bank/create_user/" class="btn btn-outline-primary">Create User</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3 col-md-2 m-sm-auto mt-5">
+                <div class="card m-sm-auto" style="width: 18rem;">
+                    <img src="{%static 'trasiction.jpg'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <a href="/bank/transiction/" class="btn btn-outline-success">Make Transaction</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-3 col-md-2  mt-5">
+                <div class="card w-sm-100 m-sm-auto" style="width: 18rem;">
+                    <img src="{%static 'bank_bg.jpg'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <a href="/bank/transiction_history/" class="btn btn-outline-info">Transition History</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+
+   {% endblock %}

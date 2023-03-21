@@ -1,0 +1,32 @@
+{% extends 'bank/basic.html' %}
+{% block css %}
+{% load static%}
+
+   {% endblock %}
+
+{% block body %}
+    <div class="container" style="margin-top: 30px; height:80vh; overflow:scroll;">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Balance</th>
+
+          </tr>
+        </thead>
+        <tbody>
+        {% for i in user%}
+          <tr>
+            <th scope="row">{{i.id}}</th>
+            <td>{{i.name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.balance}}</td>
+            <td><button class="btn btn-outline-info "><a href="/bank/make_transiction/{{i.id}}" id="m{{i.id}}" class="link1">Transfer Money</a></button></td>
+          </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+      </div>
+  {% endblock  %}

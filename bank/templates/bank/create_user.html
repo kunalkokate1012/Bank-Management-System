@@ -1,0 +1,42 @@
+{% extends 'bank/basic.html' %}
+{% block css %}
+{% load static %}
+<link rel="stylesheet" href="{%static 'create_user.css' %}">
+
+   {% endblock %}
+{% block body %}
+  <body>
+  {% load static %}
+        <div class="container"style="">
+            <h1>Create User</h1>
+            <div class="row">
+                <div class="col-md-10">
+                    <div class="row">
+                    <div class="col-md-3 w-100 mt-5">
+                    <img src="{%static 'user.jpg'%}" class="img1 img-fluid" alt="">
+                </div>
+                    <div class=" col-md-8 ">
+                        <form action="" class="w-100" method="POST" onsubmit="formValidation()">{% csrf_token %}
+                            <div class=" inner_div w-100">
+                            <label for="name" class="" >User Name</label>
+                            <input type="text"  name="name" id="name" placeholder="Enter user name" required>
+                            <label for="email" class="mt-3">User Email</label>
+                            <input type="email"  name="email" id="email" placeholder="Enter user email" required>
+                            <label for="amount" class="mt-3">Account Balance</label>
+                            <input type="number"  name="amount" id="amount" placeholder="Enter user Account Balance" required>
+                            <input type="submit" class="m-3 float-right clearfix btn btn-outline-success w-25" name="create" value="Create" id="create">
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    {% endblock %}
+  {% block js %}
+  <script>
+      function formValidation(){
+      alert("User created successfully");
+      }
+  </script>
+  {% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'bank/basic.html' %}
+{% block body %}
+  <h1 style="text-align:center; color:green;">Transition History</h1>
+    <div class="container d-flex justify-content-center align-items-center " style="margin-top: 30px; height:80vh; overflow:scroll;">
+
+    <table class="table table-striped w-md-75">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">From</th>
+            <th scope="col">To</th>
+            <th scope="col">Amount</th>
+
+          </tr>
+        </thead>
+        <tbody>
+        {% for i in user%}
+          <tr>
+            <th scope="row">{{i.id}}</th>
+            <td>{{i.from_user}}</td>
+            <td>{{i.to_user}}</td>
+            <td>{{i.ammount}}</td>
+          </tr>
+        {% endfor %}
+
+        </tbody>
+      </table>
+    </div>
+   {% endblock %}

@@ -1,0 +1,32 @@
+#b{
+    color : white;
+}
+.nav-item:hover {
+  background-color: green;
+  color : black;
+
+
+}
+
+.navbar-brand{
+color:orange;
+}
+.footer{
+ background-color: rgb(44, 43, 43);
+     color: white;
+     align-text:center;
+     height:50px;
+     display:flex;
+     justify-content:center;
+     margin-top:100px;
+
+
+}
+.footer h4{
+    width:100%;
+
+
+}
+.b{
+    color:white;
+}
